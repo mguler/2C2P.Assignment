@@ -14,4 +14,5 @@ connections strings are in ;
 #Technologies;
 
 1)Asp.net Core 5.0
-1)Entityframework Core 5.0
+
+2)Entityframework Core 5.0
