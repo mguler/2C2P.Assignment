@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_2c2p.Assignment.Validation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\2c2p.Assignment.Data.Model\2c2p.Assignment.Data.Model.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Tools\2c2p.Assignment.Tools.csproj" />
+  </ItemGroup>
+
+</Project>

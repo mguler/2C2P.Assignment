@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model _2c2p.Assignment.WebApp.Dto.TransactionUploadResponseModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Upload Transactions</h1>
+    <form method="post" action="/Transaction/Upload" enctype="multipart/form-data">
+        <input type="file" class="form-control-file border" accept=".xml,.csv" name="file" />
+        <input type="submit" class="btn btn-success" />
+    </form>
+</div>
+
+
+@if (Model != null)
+{
+    if (!Model.IsSuccessful)
+    {
+        <div class="text-center">
+            Following Errors Occured When Upload Transactions;
+            <ul>
+                @foreach (var message in Model.Messages)
+                {
+                    <li>@message</li>
+                }
+            </ul>
+        </div>
+
+    }
+    else
+    {
+        <div class="text-center">
+            Transactions uploaded successfully
+        </div>
+    }
+}
