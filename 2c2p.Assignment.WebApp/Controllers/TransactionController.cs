@@ -1,6 +1,7 @@
 ﻿using _2c2p.Assignment.Bussiness;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace _2c2p.Assignment.WebApp.Controllers
@@ -21,11 +22,19 @@ namespace _2c2p.Assignment.WebApp.Controllers
         [HttpPost]
         public IActionResult Upload([FromForm] IFormFile file)
         {
-            var result = _transactionManager.SaveTransactions(file);
-            if (!result.IsSuccessful) 
+            try
             {
-                return BadRequest(result.Messages);
-            } 
+                var result = _transactionManager.SaveTransactions(file);
+                if (!result.IsSuccessful)
+                {
+                    return BadRequest(result.Messages);
+                }
+            }
+            catch (Exception ex)
+            {
+                //TODO:add logging 
+                return StatusCode(500);
+            }
             return Ok();
         }
 

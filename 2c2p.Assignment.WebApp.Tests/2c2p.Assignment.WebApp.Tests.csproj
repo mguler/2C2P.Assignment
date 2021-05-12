@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_2c2p.Assignment.WebApp.Tests</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\2c2p.Assignment.Bussiness\2c2p.Assignment.Bussiness.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Data.Context\2c2p.Assignment.Data.Context.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Data.Model\2c2p.Assignment.Data.Model.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Dto\2c2p.Assignment.Dto.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Model.Mapping\2c2p.Assignment.Model.Mapping.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.Validation\2c2p.Assignment.Validation.csproj" />
+    <ProjectReference Include="..\2c2p.Assignment.WebApp\2c2p.Assignment.WebApp.csproj" />
+  </ItemGroup>
+
+</Project>

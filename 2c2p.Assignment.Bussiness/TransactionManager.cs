@@ -25,7 +25,7 @@ namespace _2c2p.Assignment.Bussiness
             _dataContext = dataContext;
         }
 
-        public TransactionUploadResponseModel SaveTransactions(IFormFile formFile)
+        public virtual TransactionUploadResponseModel SaveTransactions(IFormFile formFile)
         {
             var result = new TransactionUploadResponseModel();
 
@@ -36,58 +36,55 @@ namespace _2c2p.Assignment.Bussiness
                 return result;
             }
 
-            if ((formFile.ContentType != "application/vnd.ms-excel" && formFile.ContentType == "text/xml"
-                && !formFile.FileName.ToLower().EndsWith("csv")
-                && !formFile.FileName.ToLower().EndsWith("xml")))
+            if (formFile.ContentType != "application/vnd.ms-excel" && formFile.ContentType != "text/xml")
             {
                 result.Messages.Add("Unknown format");
                 result.IsSuccessful = false;
                 return result;
             }
 
-            try
+            if (formFile.ContentType == "application/vnd.ms-excel" && !formFile.FileName.ToLower().EndsWith("csv")
+                || formFile.ContentType == "text/xml" && !formFile.FileName.ToLower().EndsWith("xml"))
             {
-                var stream = formFile.OpenReadStream();
-                using (var streamReader = new StreamReader(stream))
-                {
-                    string text = streamReader.ReadToEnd();
-                    var validationResult = _validationService.Validate(formFile.ContentType, text);
-
-                    if (!validationResult.IsValid)
-                    {
-                        result.Messages = validationResult.Messages.ToList();
-                        result.IsSuccessful = false;
-                        return result;
-                    }
-                    var transactions = _mappingServiceProvider.Map<List<Transaction>>(formFile.ContentType, text);
-
-                    _dataContext.Transactions.AddRange(transactions);
-                    _dataContext.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
+                result.Messages.Add("Unknown format");
                 result.IsSuccessful = false;
-                result.Messages.Add("An error occurred");
+                return result;
+            }
+
+            var stream = formFile.OpenReadStream();
+            using (var streamReader = new StreamReader(stream))
+            {
+                string text = streamReader.ReadToEnd();
+                var validationResult = _validationService.Validate(formFile.ContentType, text);
+
+                if (!validationResult.IsValid)
+                {
+                    result.Messages = validationResult.Messages.ToList();
+                    result.IsSuccessful = false;
+                    result.HasValiationErrors = true;
+                    return result;
+                }
+                var transactions = _mappingServiceProvider.Map<List<Transaction>>(formFile.ContentType, text);
+
+                _dataContext.Transactions.AddRange(transactions);
+                _dataContext.SaveChanges();
             }
             return result;
         }
-
-        public List<GetAllTransactionsResponseModel> GetAllTransGetAllTransactionsByCurrency(string currency)
+        public virtual List<GetAllTransactionsResponseModel> GetAllTransGetAllTransactionsByCurrency(string currency)
         {
             var currencyEnumValue = (ISO4217CurrencyCode.Values)Enum.Parse(typeof(ISO4217CurrencyCode.Values),currency);
             var transactions = _dataContext.Transactions.Where(transaction => transaction.CurrencyCode== currencyEnumValue).ToList();
             var result = _mappingServiceProvider.Map<List<GetAllTransactionsResponseModel>>(transactions);
             return result;
         }
-
-        public List<GetAllTransactionsResponseModel> GetAllTransactionsByDateRange(DateTime begin, DateTime end)
+        public virtual List<GetAllTransactionsResponseModel> GetAllTransactionsByDateRange(DateTime begin, DateTime end)
         {
             var transactions = _dataContext.Transactions.Where(transaction => transaction.TransactionDate >= begin && transaction.TransactionDate <= end).ToList();
             var result = _mappingServiceProvider.Map<List<GetAllTransactionsResponseModel>>(transactions);
             return result;
         }
-        public List<GetAllTransactionsResponseModel> GetAllTransactionsByStatus(string status)
+        public virtual List<GetAllTransactionsResponseModel> GetAllTransactionsByStatus(string status)
         {
             var transactions = _dataContext.Transactions.Where(transaction => 
             status == "A" && transaction.Status == TransactionStatus.Values.APPROVED

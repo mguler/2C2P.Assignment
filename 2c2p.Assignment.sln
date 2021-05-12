@@ -11,27 +11,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DATA", "DATA", "{E648516C-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VALIDATION", "VALIDATION", "{30CA1F5C-F765-4080-846E-4A8A2DADA03A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Validation", "2c2p.Assignment.Validation\2c2p.Assignment.Validation.csproj", "{F4A001BF-AC8D-4AF4-BE2F-EDC6C4C882E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Validation", "2c2p.Assignment.Validation\2c2p.Assignment.Validation.csproj", "{F4A001BF-AC8D-4AF4-BE2F-EDC6C4C882E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.WebApp", "2c2p.Assignment.WebApp\2c2p.Assignment.WebApp.csproj", "{46C9BCDC-E2C7-4EF8-83BC-B48EBECB4574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.WebApp", "2c2p.Assignment.WebApp\2c2p.Assignment.WebApp.csproj", "{46C9BCDC-E2C7-4EF8-83BC-B48EBECB4574}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MAPPING", "MAPPING", "{BFA0A6BA-7DBD-4463-BAE2-0FB0B4358568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Data.Model", "2c2p.Assignment.Data.Model\2c2p.Assignment.Data.Model.csproj", "{56857778-6572-4293-8542-895AFC787640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Data.Model", "2c2p.Assignment.Data.Model\2c2p.Assignment.Data.Model.csproj", "{56857778-6572-4293-8542-895AFC787640}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TOOLS", "TOOLS", "{FAB2E3AC-3FAA-4042-BFE5-33C2E39A1AC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Tools", "2c2p.Assignment.Tools\2c2p.Assignment.Tools.csproj", "{10469D63-1151-4EF9-A5B6-24153B6AE017}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Tools", "2c2p.Assignment.Tools\2c2p.Assignment.Tools.csproj", "{10469D63-1151-4EF9-A5B6-24153B6AE017}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Model.Mapping", "2c2p.Assignment.Model.Mapping\2c2p.Assignment.Model.Mapping.csproj", "{E8BB6B2E-ADC0-4500-A6A1-1514D1B9A929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Model.Mapping", "2c2p.Assignment.Model.Mapping\2c2p.Assignment.Model.Mapping.csproj", "{E8BB6B2E-ADC0-4500-A6A1-1514D1B9A929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Tools.Tests", "2c2p.Assignment.Tools.Tests\2c2p.Assignment.Tools.Tests.csproj", "{BC694FC4-8D51-48CB-82E2-ADA8ACF0F01E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Tools.Tests", "2c2p.Assignment.Tools.Tests\2c2p.Assignment.Tools.Tests.csproj", "{BC694FC4-8D51-48CB-82E2-ADA8ACF0F01E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Bussiness", "2c2p.Assignment.Bussiness\2c2p.Assignment.Bussiness.csproj", "{3E87233D-03C0-467B-B55E-483737E3AF4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Bussiness", "2c2p.Assignment.Bussiness\2c2p.Assignment.Bussiness.csproj", "{3E87233D-03C0-467B-B55E-483737E3AF4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Data.Context", "2c2p.Assignment.Data.Context\2c2p.Assignment.Data.Context.csproj", "{95D010AA-F844-438B-A878-79A681438A17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Data.Context", "2c2p.Assignment.Data.Context\2c2p.Assignment.Data.Context.csproj", "{95D010AA-F844-438B-A878-79A681438A17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.Dto", "2c2p.Assignment.Dto\2c2p.Assignment.Dto.csproj", "{C503DCA3-58F1-4476-BF34-16A8AB3F4399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2c2p.Assignment.Dto", "2c2p.Assignment.Dto\2c2p.Assignment.Dto.csproj", "{C503DCA3-58F1-4476-BF34-16A8AB3F4399}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TESTS", "TESTS", "{35257EE0-05A5-446C-9B54-A330AF705926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2c2p.Assignment.WebApp.Tests", "2c2p.Assignment.WebApp.Tests\2c2p.Assignment.WebApp.Tests.csproj", "{D20BC293-24FF-4156-BF9B-8AB27C559909}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{C503DCA3-58F1-4476-BF34-16A8AB3F4399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C503DCA3-58F1-4476-BF34-16A8AB3F4399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C503DCA3-58F1-4476-BF34-16A8AB3F4399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20BC293-24FF-4156-BF9B-8AB27C559909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20BC293-24FF-4156-BF9B-8AB27C559909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20BC293-24FF-4156-BF9B-8AB27C559909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20BC293-24FF-4156-BF9B-8AB27C559909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{3E87233D-03C0-467B-B55E-483737E3AF4F} = {4CC46279-FF31-499B-9129-F15E18355590}
 		{95D010AA-F844-438B-A878-79A681438A17} = {E648516C-70CF-4297-B897-FE244E60FEAF}
 		{C503DCA3-58F1-4476-BF34-16A8AB3F4399} = {F3899C60-0092-4A7E-8F15-59BAE60A2101}
+		{D20BC293-24FF-4156-BF9B-8AB27C559909} = {35257EE0-05A5-446C-9B54-A330AF705926}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C984D80E-571F-41A1-9109-F9E13841748D}

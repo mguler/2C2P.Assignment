@@ -6,7 +6,7 @@ namespace _2c2p.Assignment.Data.Context
 {
     public class DataContext : DbContext
     {
-        public DbSet<Transaction> Transactions { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
