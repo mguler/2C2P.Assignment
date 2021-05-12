@@ -12,5 +12,6 @@ connections strings are in ;
 2) 2c2p.Assignment.WebApp -> Startup.cs (runtime)
 
 #Technologies;
+
 1)Asp.net Core 5.0
 1)Entityframework Core 5.0
