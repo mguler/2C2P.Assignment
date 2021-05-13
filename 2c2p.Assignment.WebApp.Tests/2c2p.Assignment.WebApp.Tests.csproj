@@ -25,4 +25,11 @@
     <ProjectReference Include="..\2c2p.Assignment.WebApp\2c2p.Assignment.WebApp.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TransactionsXsd.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
