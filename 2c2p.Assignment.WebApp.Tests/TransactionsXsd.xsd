@@ -224,7 +224,7 @@
 	<xs:element name="Transactions">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element maxOccurs="unbounded" name="Transaction" type="Transaction"/>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="Transaction" type="Transaction"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
